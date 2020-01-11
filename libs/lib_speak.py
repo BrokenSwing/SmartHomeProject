@@ -8,7 +8,7 @@ La librairie speak_lib sert a convertir un texte en format audio
 
 def play(audio):
 	try:
-		os.system("sudo mpg321 -g 10 " + audio)
+		os.system("sudo mpg321 -g 5 " + audio)
 		return True
 	except:
 		return False

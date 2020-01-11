@@ -24,12 +24,7 @@ class ByCardActivator(threading.Thread):
 			card_id = lib_arduino.get_uid()
 
 			if card_id is None:
-				if counter > 10:
-					old = None
-					counter = 0
-				else:
-					counter = counter + 1
-				time.sleep(1)
+				old=None
 				continue
 
 			counter = 0
@@ -41,7 +36,6 @@ class ByCardActivator(threading.Thread):
 					old = card.id
 					ExecutionThread(routine).start()
 			
-			time.sleep(1)
 
 
 manager = Manager()

@@ -35,9 +35,10 @@ class WaitTask(Task):
 		Task.__init__(self,"Attendre")
 		self.register_argument("Heures", arg.integer(minimum=0,maximum=23))
 		self.register_argument("Minutes", arg.integer(minimum=0,maximum=59))
+		self.register_argument("Secondes", arg.integer(minimum=0, maximum=59))
 
 	def execute_task(self, arg_values):
-		temps = int(arg_values["Heures"]) * 3600 + int(arg_values["Minutes"]) * 60
+		temps = int(arg_values["Heures"]) * 3600 + int(arg_values["Minutes"]) * 60 + int(arg_values["Secondes"])
 		time.sleep(temps)
 
 
