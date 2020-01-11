@@ -44,6 +44,7 @@ manager.register_task(tasks.TemperatureTask())
 manager.register_task(tasks.WaitTask())
 manager.register_task(tasks.ExecuteAt())
 manager.register_task(tasks.SaySomething())
+manager.register_task(tasks.SayTime())
 
 ByCardActivator(manager).start()
 

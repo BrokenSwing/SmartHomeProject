@@ -61,3 +61,11 @@ class SaySomething(Task):
 		
 	def execute_task(self,arg_values):
 		lib_speak.say_something(arg_values["Phrase"])
+
+class SayTime(Task):
+
+	def __init__(self):
+                Task.__init__(self,"Dire l'heure")
+
+	def execute_task(self,arg_values):
+		lib_speak.say_time()
