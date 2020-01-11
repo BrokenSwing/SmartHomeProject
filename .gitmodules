@@ -1,0 +1,3 @@
+[submodule "routineconfig"]
+	path = routineconfig
+	url = https://github.com/brokenswing/routineconfig
