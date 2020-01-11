@@ -1,7 +1,5 @@
 # Import de la librairie serial
 import serial
-from collections import Counter
-import time
 import threading
 
 # Ouverture du port serie avec :
