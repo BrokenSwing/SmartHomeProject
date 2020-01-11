@@ -22,7 +22,7 @@ class LedTask(Task):
 class TemperatureTask(Task):
 
 	def __init__(self):
-		Task.__init__(self, "Détecteur de température et humidité")
+		Task.__init__(self, "Dire la température et humidité")
 
 
 	def execute_task(self, arg_values):
@@ -32,7 +32,7 @@ class TemperatureTask(Task):
 class WaitTask(Task):
 	
 	def __init__(self):
-		Task.__init__(self,"Attendre")
+		Task.__init__(self,"Attendre (durée)")
 		self.register_argument("Heures", arg.integer(minimum=0,maximum=23))
 		self.register_argument("Minutes", arg.integer(minimum=0,maximum=59))
 		self.register_argument("Secondes", arg.integer(minimum=0, maximum=59))
@@ -45,7 +45,7 @@ class WaitTask(Task):
 class ExecuteAt(Task):
 	
 	def __init__(self):
-		Task.__init__(self, "Synchroniser")
+		Task.__init__(self, "Attendre (heure précise)")
 		self.register_argument("Heures", arg.integer(minimum=0, maximum=23))
 		self.register_argument("Minutes", arg.integer(minimum=0, maximum=59))
 
