@@ -28,3 +28,5 @@ You now have to configure apache server :
 
 * Set apache to start on boot : `sudo update-rc.d apache2 defaults`
 * Start/Restart apache : `sudo apachectl restart`
+
+* Add reboot task with the command : `crontab -e` and paste `@reboot python3 /path/to/SmartHomeProject/libs/start.py`
